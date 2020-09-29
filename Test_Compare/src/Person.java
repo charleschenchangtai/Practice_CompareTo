@@ -15,15 +15,15 @@ public class Person implements Comparable {
 
 	   public static void main(String[] args) {
  
-		     Person john = new Person("Bryen", "Male", 20);
-		     Person harry = new Person("Chris", "Male", 25);
-		     Person stacy = new Person("Jane", "Male", 21);  
+		     Person Bryen = new Person("Bryen", "Male", 20);
+		     Person Chris = new Person("Chris", "Male", 25);
+		     Person Jane = new Person("Jane", "Male", 21);  
 		 
 		     //adding to list
 		     ArrayList<Person> personList = new ArrayList<Person>();
-		     personList.add(john);
-		     personList.add(stacy);
-		     personList.add(harry);  
+		     personList.add(Bryen);
+		     personList.add(Chris);
+		     personList.add(Jane);  
 		 
 		     //sorting list on the basis of age which we have defined in compareTo method
 		     Collections.sort(personList);  
