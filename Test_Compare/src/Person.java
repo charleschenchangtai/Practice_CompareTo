@@ -1,7 +1,7 @@
 import java.util.*;
 
 //This code is only for recording the application of common commands
-public class Person implements Comparable {
+public class Person implements Comparable<Person> {
  
 	   private int age;
 	   private String name;
@@ -32,28 +32,23 @@ public class Person implements Comparable {
 		    	 System.out.println(p.toString());
 		     }		    
 	   }
-	   //·íimplements ³o­ÓComparable¤¶­±ªº®É­Ô,»İ­n¹ê¦æcompareTo()¤èªk
+	   //ç•¶implements é€™å€‹Comparableä»‹é¢çš„æ™‚å€™,éœ€è¦å¯¦è¡ŒcompareTo()æ–¹æ³•
 	   public int compareTo(Person o) {
-	 
-		// TODO Auto-generated method stub
-		//¤ñ¸û¦~ÄÖ¤j¤p, ¹w´Áµ²ªG==>Bryen,Jane,Chris
-		//·íobject o¤ñ¥»¨­object ªº¦~ÄÖÁÙ­n¤p®É,¦^¶Ç1
-		if(o.age<this.age) {
-			return 1;
-		}
-		//·íobject oµ¥©ó¥»¨­object ªº¦~ÄÖ®É,¦^¶Ç0
-		else if(o.age==this.age) {
-			return 0;
-		}
-		//·íobject o¤ñ¥»¨­object ªº¦~ÄÖÁÙ­n¤j®É,¦^¶Ç-1
-		else {
-		return -1;}
-	}
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+		//æ¯”è¼ƒå¹´é½¡å¤§å°, é æœŸçµæœ==>Bryen,Jane,Chris
+		//ç•¶æœ¬èº«object æ¯”object o çš„å¹´é½¡é‚„è¦å°æ™‚,å›å‚³-1
+		   if(this.age<o.age) {
+			   return -1;
+		   }
+ 		//ç•¶æœ¬èº«object æ¯”object o çš„å¹´é½¡æ™‚,å›å‚³0
+		   else if(this.age==o.age) {
+			   return 0;
+		   }
+ 		//ç•¶object oæ¯”æœ¬èº«object çš„å¹´é½¡é‚„è¦å¤§æ™‚,å›å‚³ 1
+		   else {
+			   return 1;
+		   }
+ 		}
+		    
 	@Override
 	   public String toString() {
 	     	return "{name: " + this.name + ", gender: " + this.gender +", age: " + this.age +"}";
